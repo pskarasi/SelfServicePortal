@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>Contact Osttra Support</title>
     <style>
         body {
@@ -107,8 +107,8 @@
 
 			embeddedservice_bootstrap.init(
 				'00DAe000005qfnN',
-				'OSTTRA_Messaging_Service',
-				'https://osttra--osttrapoc.sandbox.my.site.com/ESWOSTTRAMessagingServi1740843154697',
+				'OSTTRAChatDeployment',
+				'https://osttra--osttrapoc.sandbox.my.site.com/ESWOSTTRAChatDeployment1740886224295',
 				{
 					scrt2URL: 'https://osttra--osttrapoc.sandbox.my.salesforce-scrt.com'
 				}
@@ -118,27 +118,8 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://osttra--osttrapoc.sandbox.my.site.com/ESWOSTTRAMessagingServi1740843154697/assets/js/bootstrap.min.js' '></script>
-<button id=""launchChatButton" onclick="launchChat()">
-       Chat With Our Agents!
-</button>
+<script type='text/javascript' src='https://osttra--osttrapoc.sandbox.my.site.com/ESWOSTTRAChatDeployment1740886224295/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-<script>
-    function launchChat(){
-	 SessionStorage.SetItem( 'messagingStartCheck','Yes');
-	initEmbeddedMessaging();
-	console.log('loading messaging now');
-		setTimeout(() => {
-       embeddedservice_bootstrap.utilAPI.launchChat()
-	                .then (() => {
-					console.log('Inside Launch Chat');
-					}).catch(() => {
-					console.log('Inside Launch Chat Catch Block');
-					}).finally (() => {
-					console.log('Inside Launch Chat finally Block');
-					});
-            },2000);
-			}
-</script>
+
 </body>
 </html>			
