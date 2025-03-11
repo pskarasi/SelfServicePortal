@@ -53,12 +53,19 @@ button {
 </div>
 
 <div class="button-container">
-    <button onclick="openNewPage()">Contact Support</button>
+    <button onclick="openNewPageUAT()">Contact Support - UAT </button>
 </div>
-
+<div class="button-container">
+    <button onclick="openNewPagePOC()">Contact Support - POC </button>
+</div>
 <script>
-function openNewPage() {
+function openNewPagePOC() {
     window.location.href = 'webtocase.html';
+}
+</script>
+<script>
+function openNewPageUAT() {
+    window.location.href = 'webtocaseUAT.html';
 }
 </script>
 <script type='text/javascript'>
